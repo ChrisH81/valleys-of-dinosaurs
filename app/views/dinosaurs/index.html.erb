@@ -1,9 +1,12 @@
 <h1>Dinosaurs</h1>
 
-<% @dinosaurs.each do |dinosaur| %>
+<div class="container"> <% @dinosaurs.each do |dinosaur| %>
+    <a href= <%= dinosaur_path(dinosaur.id) %>><img src= <%= dinosaur.image_url %> class="image"></img></a>
     <p><%= link_to dinosaur.name, dinosaur_path(dinosaur.id) %></p>
-<% end %>
-
+<% end %> </div>
+<br>
+<br>
 <hr>
+
 
 <%= link_to "[New Dinosaur]", new_dinosaur_path %>
